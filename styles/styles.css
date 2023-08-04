@@ -18,6 +18,13 @@ body {
     font-weight: 600;
 }
 
+.color-primary {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* Nav styles */
 nav {
     height: 100px;
@@ -132,10 +139,67 @@ nav a {
     margin-left: 20px;
 }
 
-.banner-img>img{
+.banner-img>img {
     height: 600px;
     padding-right: 50px;
     padding-left: 50px;
+}
+
+/* Main section styles */
+.we-are-gamer {
+    display: flex;
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
+
+.we-are-gamer>img {
+    width: 868px;
+    height: 390px;
+}
+
+.section-content {
+    text-align: right;
+}
+
+.we-are-gamer-title {
+    /* text-align: right; */
+    font-family: Work Sans;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.we-are-gamer-content {
+    color: #534C64;
+    /* text-align: right; */
+    font-family: Work Sans;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.button-align {
+    /* text-align: right; */
+}
+
+.we-are-gamer-quote {
+    color: #534C64;
+    /* text-align: right; */
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.quote {
+    color: #534C64;
+    font-family: Work Sans;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 /* Media Query */
@@ -147,12 +211,12 @@ nav a {
     }
 
     .nav-title {
-        margin-left: 0;
+        margin-left: 0px;
     }
 
     .about-us {
         flex-direction: column;
-        margin-right: 0;
+        margin-right: 0px;
         margin-top: 20px;
     }
 
@@ -160,24 +224,44 @@ nav a {
         margin-top: 20px;
     }
 
-    .banner{
+    .banner {
         flex-direction: column-reverse;
         margin-top: 190px;
         padding-top: 90px;
         background-image: none;
     }
 
-    .banner-content{
+    .banner-content {
         margin-top: 20px;
-        padding-left: 0;
+        padding-left: 0px;
     }
 
-    .banner-title-1{
+    .banner-title-1 {
         padding-top: 100px;
     }
 
-    .banner-img>img{
+    .banner-img>img {
         height: 380px;
-        padding: 0;
+        padding: 0px;
+    }
+
+    .we-are-gamer {
+        flex-direction: column;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .we-are-gamer>img {
+        width: 425px;
+        height: 235px;
+    }
+
+    .section-content {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
+
+/* Medium or Tablet Devices */
+@media screen and (min-width:576) and (max-width:992px) {}
