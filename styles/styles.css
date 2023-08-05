@@ -25,7 +25,8 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Nav styles */
+/* Header section styles */
+/* nav styles */
 nav {
     height: 100px;
     display: flex;
@@ -84,7 +85,7 @@ nav a {
     color: #3C354F;
 }
 
-/* Banner styles */
+/* banner styles */
 .banner {
     display: flex;
     justify-content: space-between;
@@ -146,6 +147,7 @@ nav a {
 }
 
 /* Main section styles */
+/* we-are-gamer styles */
 .we-are-gamer {
     display: flex;
     gap: 50px;
@@ -182,9 +184,9 @@ nav a {
     margin-bottom: 30px;
 }
 
-.button-align {
-    /* text-align: right; */
-}
+/* .button-align {
+    text-align: right;
+} */
 
 .we-are-gamer-quote {
     color: #534C64;
@@ -200,6 +202,58 @@ nav a {
     font-family: Work Sans;
     font-size: 25px;
     font-weight: 700;
+}
+
+/* funny-videos styles */
+.funny-videos {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.funny-videos-title {
+    color: #0B0223;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.funny-videos-content {
+    color: #534C64;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    max-width: 260px;
+}
+
+.card-content {
+    color: #534C64;
+    font-family: Work Sans;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card>img {
+    position: relative; /*NOT FINISHED*/
+    height: 300px;
+}
+
+.card>img:hover {
+    border: 3px solid #FF42A5;
+    border-radius: 18px;
+    /* <i class="fa-regular fa-circle-play"></i> NOT FINISHED */
 }
 
 /* Media Query */
@@ -261,7 +315,11 @@ nav a {
         margin-left: 10px;
         margin-right: 10px;
     }
-}
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
 /* Medium or Tablet Devices */
 @media screen and (min-width:576) and (max-width:992px) {}
