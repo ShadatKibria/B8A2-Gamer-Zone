@@ -25,6 +25,10 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.gamer {
+    color: #FF42A5;
+}
+
 /* Header section styles */
 /* nav styles */
 nav {
@@ -54,10 +58,6 @@ nav {
     font-size: 35px;
     font-weight: 700;
     margin-top: -5px;
-}
-
-h2>.gamer {
-    color: #FF42A5;
 }
 
 .about-us {
@@ -247,14 +247,13 @@ nav a {
 
 .card>img {
     position: relative;
-    /*NOT FINISHED*/
     height: 300px;
 }
 
 .card>img:hover {
     border: 3px solid #FF42A5;
     border-radius: 18px;
-    /* <i class="fa-regular fa-circle-play"></i> NOT FINISHED */
+    /* <i class="fa-regular fa-circle-play"></i> Couldn't do it */
 }
 
 .play-games {
@@ -278,7 +277,6 @@ nav a {
     width: 258px;
     height: 295px;
     position: relative;
-    /* position: absolute; Still got something to figure out */
     left: 425px;
     top: -208px;
 }
@@ -383,7 +381,9 @@ nav a {
 
 /* Buttons section styles */
 .buttons {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 120px;
     margin-bottom: 120px;
 }
@@ -418,6 +418,74 @@ button>img {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Footer section styles */
+.footer {
+    background: #0B0223;
+}
+
+.footer-title {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 100px;
+}
+
+.footer-title>img {
+    width: 70px;
+    height: 38px;
+    padding-top: 45px;
+}
+
+.footer-title>h2 {
+    color: #FFF;
+    font-family: Work Sans;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.info>ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    color: #FFF;
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.social-icons>ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: #FFF;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 0px;
+}
+
+.policy {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    color: rgba(255, 255, 255, 0.60);
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.60);
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 100px;
 }
 
 /* Media Query */
@@ -509,6 +577,7 @@ button>img {
 
     .careers {
         flex-direction: column;
+        align-items: center;
     }
 
     .careers-contents {
@@ -517,37 +586,124 @@ button>img {
         padding-right: 10px;
     }
 
-    .content-1 {
-        text-align: center;
-    }
-
-    .content-2 {
-        font-size: 10px;
-    }
-
+    .content-1, 
+    .content-3, 
     .career-img {
         text-align: center;
     }
 
+    .content-2 {
+        width: 100%;
+        position: relative;
+        left: auto;
+        right: auto;
+    }
+
     .career-img>img {
-        width: 400px;
+        width: 300px;
     }
 
     .buttons {
-        /* display: grid;
-        grid-template-columns: repeat(100px, 5fr);
-        gap: 5px; */
+        display: block;
+        text-align: center;
+        margin-top: 70px;
     }
 
     .buttons>button {
-        /* padding: 0px; */
         margin-right: 0px;
-        margin-top: 0px;
-        /* width: 190px; */
-        /* height: 80px; */
     }
 
+    .info>ul {
+        flex-wrap: wrap;
+    }
+
+    .social-icons {
+        padding-top: 80px;
+    }
+
+    .social-icons>ul {
+        flex-wrap: wrap;
+        gap: 80px;
+        margin: 0px;
+    }
+
+    .policy {
+        flex-wrap: wrap;
+        gap: 40px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 }
 
 /* Medium or Tablet Devices */
-/* @media screen and (min-width:576) and (max-width:992px) {} */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .nav-title {
+        margin-left: 0px;
+        padding-left: 10px;
+    }
+
+    .about-us {
+        margin-right: 0px;
+        padding-right: 10px;
+    }
+
+    .banner {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 80px;
+        padding-top: 90px;
+        background-image: none;
+    }
+
+    .we-are-gamer, 
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .we-are-gamer {
+        margin-top: 100px;
+    }
+
+    .we-are-gamer>img {
+        width: 770px;
+        height: max-content;
+    }
+
+    .play-games {
+        flex-direction: column-reverse;
+        gap: 100px;
+        margin-left: 85px;
+    }
+
+    .section-content, 
+    .play-games-container, 
+    .content-1, 
+    .content-3 {
+        text-align: center;
+    }
+
+    .careers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .careers-contents {
+        padding-left: 0px;
+    }
+
+    .content-2 {
+        width: max-content;
+        gap: 10px;
+        position: relative;
+        left: -50px;
+    }
+
+    .career-img>img {
+        width: 575px;
+    }
+
+    .info>ul {
+        gap: 40px;
+    }
+}
