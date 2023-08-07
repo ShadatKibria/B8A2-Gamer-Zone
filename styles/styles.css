@@ -578,6 +578,7 @@ button>img {
     .careers {
         flex-direction: column;
         align-items: center;
+        margin-top: 0px;
     }
 
     .careers-contents {
